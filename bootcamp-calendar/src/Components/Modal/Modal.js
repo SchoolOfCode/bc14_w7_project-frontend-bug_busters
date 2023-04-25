@@ -2,8 +2,6 @@ import React from "react";
 import "./modal.css";
 
 function Modal({ filteredData, setModalToggle }) {
-
-
     return (
         <div className="modalBackground" >
             <div className="btnContainer">
@@ -21,7 +19,6 @@ function Modal({ filteredData, setModalToggle }) {
                 ))}
             </div>
         </div>
-     
     )
 }
 

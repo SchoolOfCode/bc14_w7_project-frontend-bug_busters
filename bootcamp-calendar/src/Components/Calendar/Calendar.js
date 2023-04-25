@@ -26,26 +26,32 @@ function Calendar({data}) {
         <FullCalendar
         plugins={[ timeGridPlugin ]}
         initialView="timeGridWeek"
+        // set start and end hours
         slotMinTime={"07:00:00"}
         slotMaxTime={"18:00:00"}
-        // inserts pre-made events from the data.js file
-        initialEvents={data}
+        initialEvents={data} // inserts pre-made events from the data.js file
+
         // uncomment this to allow formatting of calendar data
         // eventContent={renderEventContent}
+
+        // remove default content from day header (American formatted date) + hide parent container in css file with class .fc-scrollgrid-sync-inner
         dayHeaderContent={function(arg) {
             return null;
         }}
+
+        // Reformat date to British and insert as content to a newly inserted button in the day header sections
         dayHeaderDidMount={function(arg) {
-            const dateString = arg.date;
-            const dateObj = new Date(dateString);
-            const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-            const dayOfWeek = daysOfWeek[dateObj.getDay()];
-            const date = dateObj.getDate();
-            const month = dateObj.getMonth() + 1;
-            const year = dateObj.getFullYear();
+            const dateString = arg.date; // Get the date string from the argument
+            const dateObj = new Date(dateString); // Create a new Date object from the date string
+            const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']; // Create an array of days of the week
+            const dayOfWeek = daysOfWeek[dateObj.getDay()]; // Get the day of the week from the Date object and use it to look up the corresponding day name in the array
+            const date = dateObj.getDate(); // Get the day of the month from the Date object
+            const month = dateObj.getMonth() + 1; // Get the month from the Date object and add 1, since getMonth() returns a zero-based index (javascript... 🙄)
+            const year = dateObj.getFullYear(); // Get the year from the Date object
+
+            // Create a formatted date string using the day of the week, day of the month, and month
             const formattedDate = `${dayOfWeek} ${date.toString()} / ${month.toString()}`;
             // create date format for attaching to button
-            // const dataDate = `${date.toString().padStart(2, ' ')}-${month.toString().padStart(2, '0')}-${year}`;
             const dataDate = `${year}-${month.toString().padStart(2, '0')}-${date.toString().padStart(2, ' ')}`;
 
             // create button element
@@ -53,7 +59,9 @@ function Calendar({data}) {
             // add a class to the button
             button.classList.add("day-header-button");
 
+            // add British formatted date to inner text of button
             button.innerText=`${formattedDate}\nResources`;
+            // use arg.el (as suggested in the FullCalendar docs: https://fullcalendar.io/docs/day-header-render-hooks to append button to the day header)
             arg.el.appendChild(button);
 
             // add on click event listener to button
@@ -61,13 +69,14 @@ function Calendar({data}) {
                 // on button click toggle modal useState to true
                 setModalToggle(true);
 
-                // use filter() to search data object for objects where the start property contains the buttons data-date attribute
+                // use filter() to search data object for objects where the start property contains the dataDate string
                 const filterData = data.filter(item => item.start.startsWith(dataDate));
 
                 setFilteredData(filterData);
             })
         }}
         />
+        {/* display modal on click of resources button */}
         {modalToggle && <Modal filteredData={filteredData} setModalToggle={setModalToggle}/>}
     </>
     );
