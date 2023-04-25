@@ -5,9 +5,9 @@ import './calendar.css'
 import Modal from "../Modal/Modal"
 
 
-function Calendar() {
+function Calendar({data}) {
   const [modalToggle, setModalToggle] = useState(false);
-
+  
   return (
     <>
       <FullCalendar
@@ -38,7 +38,7 @@ function Calendar() {
             })
         }}
       />
-      {modalToggle && <Modal setModalToggle={setModalToggle}/>}
+      {modalToggle && <Modal data={data} setModalToggle={setModalToggle}/>}
     </>
   );
 }

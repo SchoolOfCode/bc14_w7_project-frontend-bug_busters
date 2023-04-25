@@ -1,14 +1,19 @@
 import React from "react";
 import "./modal.css";
 
-function Modal({setModalToggle}) {
+function Modal({data, setModalToggle}) {
+    console.log(data);
     return (
         <div className="modalBackground" >
+            <div className="btnContainer">
             <button className="closePopUp" onClick={() => {setModalToggle(false)}}>X</button>
-            <div className="topics"> testing if this works to some extent</div>
-            <div className="workshopRepoLinks"></div>
-            <div className="recordings"></div>
-            <div className="furtherResources"></div>
+            </div>
+            <div className="modalContent">
+            <div className="topics"> {data[0].topics} </div>
+            <div className="workshopRepoLinks"> {data[0].workshopRepoLinks} </div>
+            <div className="recordings"> {data[0].recordings} </div>
+            <div className="furtherResources"> {data[0].furtherResources} </div>
+            </div>
         </div>
      
     )
