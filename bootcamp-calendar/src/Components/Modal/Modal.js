@@ -1,18 +1,24 @@
 import React from "react";
 import "./modal.css";
 
-function Modal({data, setModalToggle}) {
-    console.log(data);
+function Modal({ filteredData, setModalToggle }) {
+
+
     return (
         <div className="modalBackground" >
             <div className="btnContainer">
-            <button className="closePopUp" onClick={() => {setModalToggle(false)}}>X</button>
+                <button className="closePopUp" onClick={() => {setModalToggle(false)}}>X</button>
             </div>
             <div className="modalContent">
-            <div className="topics"> {data[0].topics} </div>
-            <div className="workshopRepoLinks"> {data[0].workshopRepoLinks} </div>
-            <div className="recordings"> {data[0].recordings} </div>
-            <div className="furtherResources"> {data[0].furtherResources} </div>
+                {/* map() through filteredData object and output JSX for each entry */}
+                {filteredData.map(item => (
+                    <div key={item.id}>
+                        <div className="topics">{item.topics}</div>
+                        <div className="workshopRepoLinks">{item.workshopRepoLinks}</div>
+                        <div className="recordings">{item.recordings}</div>
+                        <div className="furtherResources">{item.furtherResources}</div>
+                    </div>
+                ))}
             </div>
         </div>
      
