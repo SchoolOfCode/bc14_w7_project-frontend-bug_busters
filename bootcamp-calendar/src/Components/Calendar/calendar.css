@@ -7,3 +7,10 @@
 {
     height: 560px;
 }
+
+/* Forces short duration events within events to display across full grid width */
+.fc-timegrid-event-short
+{
+    height: fit-content;
+    inset: 0 0 0 -100%!important;
+}

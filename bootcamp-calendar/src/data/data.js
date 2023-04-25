@@ -1,3 +1,10 @@
+// generate an id number
+let id= 1;
+function genID(id) {
+    id++;
+    return id;
+}
+
 const data = [
     {
         topics: "Introduction to JavaScript",
@@ -7,7 +14,27 @@ const data = [
         start: "2023-04-24T09:00:00",
         end: "2023-04-24T12:30:00",
         title: "JS Intro",
-        id: 1
+        id: genID(id),
+    },
+    {
+        topics: null,
+        workshopRepoLinks: null,
+        recordings: null,
+        furtherResources: null,
+        start: "2023-04-24T10:30:00",
+        end: "2023-04-24T10:50:00",
+        title: "☕ Break Time ☕",
+        id: genID(id),
+    },
+    {
+        topics: null,
+        workshopRepoLinks: null,
+        recordings: null,
+        furtherResources: null,
+        start: "2023-04-24T12:30:00",
+        end: "2023-04-24T13:30:00",
+        title: "🥗 Lunch Break 🥗",
+        id: genID(id),
     },
     {
         topics: "JavaScript Basics: Variables, Operators, and Data Types",
@@ -17,7 +44,7 @@ const data = [
         start: "2023-04-24T13:30:00",
         end: "2023-04-24T17:00:00",
         title: "JS Basics",
-        id: 2
+        id: genID(id),
     },
     {
         topics: "React Fundamentals: Components, Props, and State",
@@ -27,7 +54,17 @@ const data = [
         start: "2023-04-25T09:00:00",
         end: "2023-04-25T12:30:00",
         title: "React Fundamentals",
-        id: 3
+        id: genID(id),
+    },
+    {
+        topics: null,
+        workshopRepoLinks: null,
+        recordings: null,
+        furtherResources: null,
+        start: "2023-04-25T12:30:00",
+        end: "2023-04-25T13:30:00",
+        title: "🥗 Lunch Break 🥗",
+        id: genID(id),
     },
     {
         topics: "Working with APIs and Fetch in JavaScript",
@@ -37,7 +74,7 @@ const data = [
         start: "2023-04-25T13:30:00",
         end: "2023-04-25T17:00:00",
         title: "APIs & Fetch",
-        id: 4
+        id: genID(id),
     },
     {
         topics: "React Hooks: useState and useEffect",
@@ -47,7 +84,17 @@ const data = [
         start: "2023-04-26T09:00:00",
         end: "2023-04-26T12:30:00",
         title: "React Hooks",
-        id: 5
+        id: genID(id),
+    },
+    {
+        topics: null,
+        workshopRepoLinks: null,
+        recordings: null,
+        furtherResources: null,
+        start: "2023-04-26T12:30:00",
+        end: "2023-04-26T13:30:00",
+        title: "🥗 Lunch Break 🥗",
+        id: genID(id),
     },
     {
         topics: "State Management with Redux in React",
@@ -57,7 +104,7 @@ const data = [
         start: "2023-04-26T13:30:00",
         end: "2023-04-26T17:00:00",
         title: "Redux in React",
-        id: 6
+        id: genID(id),
     },
     {
         topics: "Advanced React Concepts: Context, Error Boundaries, and Portals",
@@ -67,7 +114,17 @@ const data = [
         start: "2023-04-27T09:00:00",
         end: "2023-04-27T12:30:00",
         title: "Advanced React",
-        id: 7
+        id: genID(id),
+    },
+    {
+        topics: null,
+        workshopRepoLinks: null,
+        recordings: null,
+        furtherResources: null,
+        start: "2023-04-27T12:30:00",
+        end: "2023-04-27T13:30:00",
+        title: "🥗 Lunch Break 🥗",
+        id: genID(id),
     },
     {
         topics: "JavaScript Promises and Async/Await",
@@ -77,7 +134,7 @@ const data = [
         start: "2023-04-27T13:30:00",
         end: "2023-04-27T17:00:00",
         title: "Promises & Async/Await",
-        id: 8
+        id: genID(id),
     },
     {
         topics: "Working with Forms and Form Validation in React",
@@ -85,9 +142,9 @@ const data = [
         recordings: "https://www.youtube.com/react-forms-recordings",
         furtherResources: "https://www.example.com/react-forms-resources",
         start: "2023-04-28T09:00:00",
-        end: "2023-04-28T16:00:00",
+        end: "2023-04-28T12:30:00",
         title: "Hack-a-thon: Forms and Form Validation",
-        id: 9
+        id: genID(id),
     },
     {
         topics: null,
@@ -96,8 +153,18 @@ const data = [
         furtherResources: null,
         start: "2023-04-28T12:30:00",
         end: "2023-04-28T13:30:00",
-        title: "Lunch Break",
-        id: 10
+        title: "🥗 Lunch Break 🥗",
+        id: genID(id),
+    },
+    {
+        topics: null,
+        workshopRepoLinks: null,
+        recordings: null,
+        furtherResources: null,
+        start: "2023-04-28T13:30:00",
+        end: "2023-04-28T16:00:00",
+        title: "Hack-a-thon: Forms and Form Validation continued",
+        id: genID(id),
     },
     {
         topics: null,
@@ -107,7 +174,7 @@ const data = [
         start: "2023-04-28T16:00:00",
         end: "2023-04-28T17:00:00",
         title: "Presentations",
-        id: 11
+        id: genID(id),
     },
     {
         // TODO:
@@ -118,7 +185,7 @@ const data = [
         start: "2023-05-09T09:00:00",
         end: "2023-05-09T17:00:00",
         title: "React Router",
-        id: 12
+        id: genID(id),
     },
     {
         topics: "Working with CSS in React: Styled Components and CSS Modules",
@@ -128,7 +195,7 @@ const data = [
         start: "2023-05-10T09:00:00",
         end: "2023-05-10T17:00:00",
         title: "CSS in React",
-        id: 13
+        id: genID(id),
     },
     {
         topics: "Performance Optimiation in React: Memo, useMemo, and useCallback",
@@ -138,7 +205,7 @@ const data = [
         start: "2023-05-11T09:00:00",
         end: "2023-05-11T17:00:00",
         title: "React Performance",
-        id: 14
+        id: genID(id),
     },
     {
         topics: "State Management in React: Redux and Redux Toolkit",
@@ -148,7 +215,7 @@ const data = [
         start: "2023-05-12T09:00:00",
         end: "2023-05-12T17:00:00",
         title: "React Redux",
-        id: 15
+        id: genID(id),
     },
     {
         topics: "Asynchronous Data Fetching in React: Fetch, Axios, and GraphQL",
@@ -158,7 +225,7 @@ const data = [
         start: "2023-05-15T09:00:00",
         end: "2023-05-15T17:00:00",
         title: "Async Data Fetching",
-        id: 16
+        id: genID(id),
     },
     {
         topics: "Server-side Rendering (SSR) with Next.js in React Apps",
@@ -168,7 +235,7 @@ const data = [
         start: "2023-05-16T09:00:00",
         end: "2023-05-16T17:00:00",
         title: "Next.js SSR",
-        id: 17
+        id: genID(id),
     }
     
 ]

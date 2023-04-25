@@ -53,7 +53,7 @@ function Calendar({data}) {
             // add a class to the button
             button.classList.add("day-header-button");
 
-            button.innerText=`${formattedDate} - Resources`;
+            button.innerText=`${formattedDate}\nResources`;
             arg.el.appendChild(button);
 
             // add on click event listener to button
