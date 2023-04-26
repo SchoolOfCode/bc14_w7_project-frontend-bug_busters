@@ -15,6 +15,7 @@ const data = [
         end: "2023-04-24T12:30:00",
         title: "JS Intro",
         id: genID(id),
+    
     },
     {
         topics: null,
@@ -25,6 +26,7 @@ const data = [
         end: "2023-04-24T10:50:00",
         title: "☕ Break Time ☕",
         id: genID(id),
+        backgroundColor: "orange",
     },
     {
         topics: null,
@@ -35,6 +37,7 @@ const data = [
         end: "2023-04-24T13:30:00",
         title: "🥗 Lunch Break 🥗",
         id: genID(id),
+        backgroundColor: "orange",
     },
     {
         topics: "JavaScript Basics: Variables, Operators, and Data Types",
@@ -61,10 +64,22 @@ const data = [
         workshopRepoLinks: null,
         recordings: null,
         furtherResources: null,
+        start: "2023-04-25T10:30:00",
+        end: "2023-04-25T10:50:00",
+        title: "☕ Break Time ☕",
+        id: genID(id),
+        backgroundColor: "orange",
+    },
+    {
+        topics: null,
+        workshopRepoLinks: null,
+        recordings: null,
+        furtherResources: null,
         start: "2023-04-25T12:30:00",
         end: "2023-04-25T13:30:00",
         title: "🥗 Lunch Break 🥗",
         id: genID(id),
+        backgroundColor: "orange",
     },
     {
         topics: "Working with APIs and Fetch in JavaScript",
@@ -91,10 +106,23 @@ const data = [
         workshopRepoLinks: null,
         recordings: null,
         furtherResources: null,
+        start: "2023-04-26T10:30:00",
+        end: "2023-04-26T10:50:00",
+        title: "☕ Break Time ☕",
+        id: genID(id),
+        backgroundColor: "orange",
+    },
+    {
+        topics: null,
+        workshopRepoLinks: null,
+        recordings: null,
+        furtherResources: null,
         start: "2023-04-26T12:30:00",
         end: "2023-04-26T13:30:00",
         title: "🥗 Lunch Break 🥗",
         id: genID(id),
+        backgroundColor: "orange",
+    
     },
     {
         topics: "State Management with Redux in React",
@@ -112,9 +140,20 @@ const data = [
         recordings: "https://www.youtube.com/react-advanced-recordings",
         furtherResources: "https://www.example.com/react-advanced-resources",
         start: "2023-04-27T09:00:00",
-        end: "2023-04-27T12:30:00",
+        end: "2023-04-27T10:50:00",
         title: "Advanced React",
         id: genID(id),
+    },
+    {
+        topics: null,
+        workshopRepoLinks: null,
+        recordings: null,
+        furtherResources: null,
+        start: "2023-04-27T10:30:00",
+        end: "2023-04-27T10:50:00",
+        title: "☕ Break Time ☕",
+        id: genID(id),
+        backgroundColor: "orange",
     },
     {
         topics: null,
@@ -125,6 +164,18 @@ const data = [
         end: "2023-04-27T13:30:00",
         title: "🥗 Lunch Break 🥗",
         id: genID(id),
+        backgroundColor: "orange",
+    },
+    {
+        topics: null,
+        workshopRepoLinks: null,
+        recordings: null,
+        furtherResources: null,
+        start: "2023-04-27T11:15:00",
+        end: "2023-04-27T12:30:00",
+        title: " ☁ Mindset ☁  ",
+        id: genID(id),
+        backgroundColor: "red",
     },
     {
         topics: "JavaScript Promises and Async/Await",
@@ -145,7 +196,19 @@ const data = [
         end: "2023-04-28T12:30:00",
         title: "Hack-a-thon: Forms and Form Validation",
         id: genID(id),
+        backgroundColor: "green",
     },
+    {
+        topics: null,
+        workshopRepoLinks: null,
+        recordings: null,
+        furtherResources: null,
+        start: "2023-04-28T10:30:00",
+        end: "2023-04-28T10:50:00",
+        title: "☕ Break Time ☕",
+        id: genID(id),
+        backgroundColor: "orange",
+    }, 
     {
         topics: null,
         workshopRepoLinks: null,
@@ -155,7 +218,9 @@ const data = [
         end: "2023-04-28T13:30:00",
         title: "🥗 Lunch Break 🥗",
         id: genID(id),
+        backgroundColor: "orange",
     },
+    
     {
         topics: null,
         workshopRepoLinks: null,
@@ -165,6 +230,7 @@ const data = [
         end: "2023-04-28T16:00:00",
         title: "Hack-a-thon: Forms and Form Validation continued",
         id: genID(id),
+        backgroundColor: "green",
     },
     {
         topics: null,
@@ -237,7 +303,7 @@ const data = [
         title: "Next.js SSR",
         id: genID(id),
     }
-    
+    // Generate 4 more dummy data via Chat, as theres 4.
 ]
 
 export default data;
