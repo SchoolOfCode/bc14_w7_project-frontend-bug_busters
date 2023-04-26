@@ -1,0 +1,10 @@
+.socials {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .mail-icon {
+    display: flex;
+    justify-content: flex-end;
+  }
+
