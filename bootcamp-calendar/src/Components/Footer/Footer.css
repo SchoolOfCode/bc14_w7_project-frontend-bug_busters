@@ -1,7 +1,10 @@
 .footer-container {
+    margin-top: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-image: url("../../Assets/footerbackground.jpg");
+    height: 50px;
   }
   
   .socials {
@@ -14,9 +17,9 @@
     justify-content: flex-end;
   }
   
-  
-
-  a {
+  a 
+  {
     padding: 0 5px 0 5px;
+    color: white;
   }
 
