@@ -3,7 +3,7 @@ import "./modal.css";
 
 function Modal({ filteredData, setModalToggle }) {
     return (
-        <div className="modalBackground" >
+        <div data-testid="modalBackground" className="modalBackground" >
             <div className="btnContainer">
                 <button className="closePopUp" onClick={() => {setModalToggle(false)}}>X</button>
             </div>

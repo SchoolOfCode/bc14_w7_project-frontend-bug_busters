@@ -1,8 +1,13 @@
-import { render, screen } from '@testing-library/react';
+import {fireEvent,render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('button renders pop up after button click', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+  const btn = screen.getAllByRole('button', { class : "day-header-button" })[2]; 
+  //const modalBackground = screen.getByTestId('modalBackground');
+
+  fireEvent.click(btn);
+
+  expect(screen.getByTestId('modalBackground')).toBeInTheDocument();
 });
