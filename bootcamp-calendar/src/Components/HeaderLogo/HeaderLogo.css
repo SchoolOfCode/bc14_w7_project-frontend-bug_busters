@@ -1,0 +1,19 @@
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .logo-container img {
+    width: 120px;
+    height: 120px;
+    margin-right: 10px;
+    padding-bottom: 20px
+  }
+  
+  .logo-container h1 {
+    margin: 0;
+    text-align: center;
+    flex: 1;
+  }
+  

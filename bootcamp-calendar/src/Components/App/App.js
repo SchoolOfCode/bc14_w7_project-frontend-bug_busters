@@ -1,11 +1,15 @@
 import Calendar  from '../Calendar/Calendar';
 import './App.css';
 import data from "../../data/data"
+import HeaderLogo from "../HeaderLogo/HeaderLogo"
+import Footer from "../Footer/Footer"
 
 function App() {
   return (
     <div className="App">
-        <Calendar data={data} />
+      <HeaderLogo />
+      <Calendar data={data} />
+      <Footer />
     </div>
   );
 }
