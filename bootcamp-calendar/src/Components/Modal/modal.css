@@ -1,10 +1,9 @@
 .modalBackground {
-    width: 80vw;
-    height: 80vh;
-    background-color: rgb(208, 231, 211);
+    width: 70%;
+    height: 70%;
     position: fixed;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     z-index: 99;
     top: 9%;
@@ -12,7 +11,13 @@
   } 
 
 .modalContent {
-
+  background-color: #DBE5ED;
+  width: 100%;
+  max-height: 100%;
+  overflow: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
 
@@ -22,7 +27,19 @@
   display: flex;
   justify-content: flex-end;
   position: absolute;
-  top: 0;
-  right: 0;
-  padding: 10px;
+  top: 6%;
+  right: 0%;
+  padding: 2px;
+}
+
+.sectionTitle {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.topics,
+.workshopRepoLinks,
+.recordings,
+.furtherResources {
+  text-indent: 20px;
 }
