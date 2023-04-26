@@ -4,10 +4,12 @@ import {faFacebook, faLinkedin, faTwitter, faSlack} from "@fortawesome/free-bran
  
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
+import './Footer.css';
+
 function Footer() {
 
   return (
-    <footer>
+    <footer className="footer-container">
         <div className="socials">
             <a href="https://en-gb.facebook.com/schoolofcode/"><FontAwesomeIcon icon={faFacebook} /></a>
             <a href="https://www.linkedin.com/school/school-of-code/"><FontAwesomeIcon icon={faLinkedin} /></a>
