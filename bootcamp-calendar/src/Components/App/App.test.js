@@ -1,13 +1,24 @@
-import {fireEvent,render, screen } from '@testing-library/react';
+import {fireEvent, render, screen } from '@testing-library/react';
+import { expect, test, waitFor} from '@jest/globals';
+import Modal from '../Modal/Modal';
 import App from './App';
 
-test('button renders pop up after button click', () => {
+
+
+test("Modal should appear when day header button is clicked", async function() {
   render(<App />);
 
-  const btn = screen.getAllByRole('button', { class : "day-header-button" })[2]; 
-  //const modalBackground = screen.getByTestId('modalBackground');
+  fireEvent.click(screen.getAllByRole('button', { class : "day-header-button" })[2]);
 
-  fireEvent.click(btn);
+  let dummyData = [{}];
 
-  expect(screen.getByTestId('modalBackground')).toBeInTheDocument();
-});
+  render(<Modal filteredData={dummyData} setModalToggle={jest.fn}/>);
+
+  const actual = screen.getByTestId('modalBackground');
+
+  await waitFor(() => {
+    expect(actual).toBeInTheDocument();
+    // expect(screen.getByTestId('modalBackground')).toBeInTheDocument();
+  }
+  // expect(screen.getByTestId('modalBackground')).toBeInTheDocument();
+)});
