@@ -12,6 +12,7 @@
 .fc-view-harness
 {
     height: 600px!important;
+    margin: 20px;
 }
 
 /* Forces short duration events within events to display across full grid width */
