@@ -7,7 +7,11 @@
 /* force static height on calendar - temporary fix for visual bug where last cell is unusually large */
 .fc-timeGridWeek-view
 {
-    height: 560px;
+    height: 590px;
+}
+.fc-view-harness
+{
+    height: 600px!important;
 }
 
 /* Forces short duration events within events to display across full grid width */
@@ -15,4 +19,13 @@
 {
     height: fit-content;
     inset: 0 0 0 -100%!important;
+}
+
+.day-header-button
+{
+    width: 100%;
+    border-radius: 10px;
+    background-color: #363D63;
+    color: white;
+    padding: 10px;
 }
