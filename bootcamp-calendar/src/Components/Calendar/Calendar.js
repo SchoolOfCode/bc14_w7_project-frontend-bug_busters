@@ -6,10 +6,12 @@ import './calendar.css'
 import Modal from "../Modal/Modal"
 
 
-function Calendar({data}) {
+function Calendar({ data, setDateStart }) {
     const [modalToggle, setModalToggle] = useState(false);
 
     const [filteredData, setFilteredData] = useState({});
+
+    
 
     return (
     <>
@@ -21,6 +23,11 @@ function Calendar({data}) {
         slotMaxTime={"18:00:00"}
         initialEvents={data} // inserts pre-made events from the data.js file
         contentHeight={"auto"} // remove scroll bar - display as is on screen
+
+        datesSet={function(dateInfo) {
+            setDateStart(dateInfo.start);
+            console.log(dateInfo);
+        }}
 
         // remove default content from day header (American formatted date) + hide parent container in css file with class .fc-scrollgrid-sync-inner
         dayHeaderContent={function(arg) {
