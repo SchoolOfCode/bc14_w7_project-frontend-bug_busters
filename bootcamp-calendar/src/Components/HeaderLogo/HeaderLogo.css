@@ -16,13 +16,12 @@
     margin: 0;
     text-align: center;
     flex: 1;
-    background-color: #D9D9D980;
     border-radius: 10px;
     height: 125px;
-    font-size: 2em;
+    font-size: 2.5em;
     align-items: center;
     display: flex;
     justify-content: center;
-
+    color: white;
   }
   

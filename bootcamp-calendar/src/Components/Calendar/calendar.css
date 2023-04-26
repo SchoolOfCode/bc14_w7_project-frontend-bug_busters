@@ -25,10 +25,10 @@
 .day-header-button
 {
     width: 100%;
-    border-radius: 10px;
     background-color: #363D63;
     color: white;
     padding: 10px;
     font-weight: 700;
     font-size: 0.9em;
+    cursor: pointer;
 }
