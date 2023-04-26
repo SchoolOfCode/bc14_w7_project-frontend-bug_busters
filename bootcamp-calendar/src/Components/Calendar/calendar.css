@@ -1,9 +1,18 @@
+/* Hide the day header parent container that originally held american date format */
 .fc-scrollgrid-sync-inner
 {
     display: none;
 }
 
+/* force static height on calendar - temporary fix for visual bug where last cell is unusually large */
 .fc-timeGridWeek-view
 {
     height: 560px;
+}
+
+/* Forces short duration events within events to display across full grid width */
+.fc-timegrid-event-short
+{
+    height: fit-content;
+    inset: 0 0 0 -100%!important;
 }
