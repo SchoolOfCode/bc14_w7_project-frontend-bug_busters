@@ -1,14 +1,14 @@
 .modalBackground {
-    width: 70%;
-    height: 70%;
-    position: fixed;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    z-index: 99;
-    top: 9%;
-    left: 9%;
-  } 
+  width: 70%;
+  height: 70%;
+  position: fixed;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  z-index: 99;
+  top: 9%;
+  left: 9%;
+} 
 
 .modalContent {
   background-color: #DBE5ED;
@@ -20,14 +20,15 @@
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  position: relative; 
 
 }
 
 .btnContainer {
+  position: relative; 
   display: flex;
   justify-content: flex-end;
-  position: absolute;
-  top: 6%;
+  top: 0%; 
   right: 0%;
   padding: 2px;
 }

@@ -4,10 +4,10 @@ import "./modal.css";
 function Modal({ filteredData, setModalToggle }) {
     return (
         <div data-testid="modalBackground" className="modalBackground" >
+            <div className="modalContent">
             <div className="btnContainer">
                 <button className="closePopUp" onClick={() => {setModalToggle(false)}}>X</button>
             </div>
-            <div className="modalContent">
                 <div className="sectionTitle">Topics</div>
                 {filteredData.map(item => (
                     <div key={item.id}>
