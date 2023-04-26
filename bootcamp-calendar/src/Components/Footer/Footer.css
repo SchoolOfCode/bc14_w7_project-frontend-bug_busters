@@ -1,4 +1,10 @@
-.socials {
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .socials {
     display: flex;
     justify-content: flex-start;
   }
@@ -6,5 +12,11 @@
   .mail-icon {
     display: flex;
     justify-content: flex-end;
+  }
+  
+  
+
+  a {
+    padding: 0 5px 0 5px;
   }
 
