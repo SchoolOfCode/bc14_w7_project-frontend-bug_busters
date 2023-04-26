@@ -50,6 +50,7 @@ function WeeklyTopicBar({ data, dateStart }) {
                                     && !item.title.includes('🥗 Lunch Break 🥗')
                                     && !item.title.includes('☁ Mindset ☁')
                                     && !item.title.toLowerCase().includes('continued')
+                                    && !item.title.toLowerCase().includes('presentations')
                 )
                 .map(item => item.title)
                 .join(' - ')
