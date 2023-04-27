@@ -1,6 +1,6 @@
 // generate an id number
-let id= 1;
-function genID(id) {
+let id = 1;
+function genID() {
     id++;
     return id;
 }
@@ -14,7 +14,7 @@ const data = [
         start: "2023-04-24T09:00:00",
         end: "2023-04-24T12:30:00",
         title: "JS Intro",
-        id: genID(id),
+        id: genID(),
     
     },
     {
@@ -25,7 +25,7 @@ const data = [
         start: "2023-04-24T10:30:00",
         end: "2023-04-24T10:50:00",
         title: "☕ Break Time ☕",
-        id: genID(id),
+        id: genID(),
         backgroundColor: "orange",
     },
     {
@@ -36,7 +36,7 @@ const data = [
         start: "2023-04-24T12:30:00",
         end: "2023-04-24T13:30:00",
         title: "🥗 Lunch Break 🥗",
-        id: genID(id),
+        id: genID(),
         backgroundColor: "orange",
     },
     {
@@ -47,7 +47,7 @@ const data = [
         start: "2023-04-24T13:30:00",
         end: "2023-04-24T17:00:00",
         title: "JS Basics",
-        id: genID(id),
+        id: genID(),
     },
     {
         topics: "React Fundamentals: Components, Props, and State",
@@ -57,7 +57,7 @@ const data = [
         start: "2023-04-25T09:00:00",
         end: "2023-04-25T12:30:00",
         title: "React Fundamentals",
-        id: genID(id),
+        id: genID(),
     },
     {
         topics: null,
@@ -67,7 +67,7 @@ const data = [
         start: "2023-04-25T10:30:00",
         end: "2023-04-25T10:50:00",
         title: "☕ Break Time ☕",
-        id: genID(id),
+        id: genID(),
         backgroundColor: "orange",
     },
     {
@@ -78,7 +78,7 @@ const data = [
         start: "2023-04-25T12:30:00",
         end: "2023-04-25T13:30:00",
         title: "🥗 Lunch Break 🥗",
-        id: genID(id),
+        id: genID(),
         backgroundColor: "orange",
     },
     {
@@ -89,7 +89,7 @@ const data = [
         start: "2023-04-25T13:30:00",
         end: "2023-04-25T17:00:00",
         title: "APIs & Fetch",
-        id: genID(id),
+        id: genID(),
     },
     {
         topics: "React Hooks: useState and useEffect",
@@ -99,7 +99,7 @@ const data = [
         start: "2023-04-26T09:00:00",
         end: "2023-04-26T12:30:00",
         title: "React Hooks",
-        id: genID(id),
+        id: genID(),
     },
     {
         topics: null,
@@ -109,7 +109,7 @@ const data = [
         start: "2023-04-26T10:30:00",
         end: "2023-04-26T10:50:00",
         title: "☕ Break Time ☕",
-        id: genID(id),
+        id: genID(),
         backgroundColor: "orange",
     },
     {
@@ -120,7 +120,7 @@ const data = [
         start: "2023-04-26T12:30:00",
         end: "2023-04-26T13:30:00",
         title: "🥗 Lunch Break 🥗",
-        id: genID(id),
+        id: genID(),
         backgroundColor: "orange",
     
     },
@@ -132,7 +132,7 @@ const data = [
         start: "2023-04-26T13:30:00",
         end: "2023-04-26T17:00:00",
         title: "Redux in React",
-        id: genID(id),
+        id: genID(),
     },
     {
         topics: "Advanced React Concepts: Context, Error Boundaries, and Portals",
@@ -142,7 +142,7 @@ const data = [
         start: "2023-04-27T09:00:00",
         end: "2023-04-27T10:50:00",
         title: "Advanced React",
-        id: genID(id),
+        id: genID(),
     },
     {
         topics: null,
@@ -152,7 +152,7 @@ const data = [
         start: "2023-04-27T10:30:00",
         end: "2023-04-27T10:50:00",
         title: "☕ Break Time ☕",
-        id: genID(id),
+        id: genID(),
         backgroundColor: "orange",
     },
     {
@@ -163,7 +163,7 @@ const data = [
         start: "2023-04-27T12:30:00",
         end: "2023-04-27T13:30:00",
         title: "🥗 Lunch Break 🥗",
-        id: genID(id),
+        id: genID(),
         backgroundColor: "orange",
     },
     {
@@ -174,7 +174,7 @@ const data = [
         start: "2023-04-27T10:55:00",
         end: "2023-04-27T12:30:00",
         title: " ☁ Mindset ☁  ",
-        id: genID(id),
+        id: genID(),
         backgroundColor: "red",
     },
     {
@@ -185,7 +185,7 @@ const data = [
         start: "2023-04-27T13:30:00",
         end: "2023-04-27T17:00:00",
         title: "Promises & Async/Await",
-        id: genID(id),
+        id: genID(),
     },
     {
         topics: "Working with Forms and Form Validation in React",
@@ -195,7 +195,7 @@ const data = [
         start: "2023-04-28T09:00:00",
         end: "2023-04-28T12:30:00",
         title: "Hack-a-thon: Forms and Form Validation",
-        id: genID(id),
+        id: genID(),
         backgroundColor: "green",
     },
     {
@@ -206,7 +206,7 @@ const data = [
         start: "2023-04-28T10:30:00",
         end: "2023-04-28T10:50:00",
         title: "☕ Break Time ☕",
-        id: genID(id),
+        id: genID(),
         backgroundColor: "orange",
     }, 
     {
@@ -217,7 +217,7 @@ const data = [
         start: "2023-04-28T12:30:00",
         end: "2023-04-28T13:30:00",
         title: "🥗 Lunch Break 🥗",
-        id: genID(id),
+        id: genID(),
         backgroundColor: "orange",
     },
     
@@ -229,7 +229,7 @@ const data = [
         start: "2023-04-28T13:30:00",
         end: "2023-04-28T16:00:00",
         title: "Hack-a-thon: Forms and Form Validation continued",
-        id: genID(id),
+        id: genID(),
         backgroundColor: "green",
     },
     {
@@ -240,7 +240,7 @@ const data = [
         start: "2023-04-28T16:00:00",
         end: "2023-04-28T17:00:00",
         title: "Presentations",
-        id: genID(id),
+        id: genID(),
     },
     {
         
@@ -251,7 +251,7 @@ const data = [
         start: "2023-05-01T09:00:00",
         end: "2023-05-01T12:30:00",
         title: "React Router",
-        id: genID(id),
+        id: genID(),
     },
     { topics: null,
         workshopRepoLinks: null,
@@ -260,7 +260,7 @@ const data = [
         start: "2023-05-01T10:30:00",
         end: "2023-05-01T10:50:00",
         title: "☕ Break Time ☕",
-        id: genID(id),
+        id: genID(),
         backgroundColor: "orange",
     },
     {
@@ -271,7 +271,7 @@ const data = [
         start: "2023-05-01T12:30:00",
         end: "2023-05-01T13:30:00",
         title: "🥗 Lunch Break 🥗",
-        id: genID(id),
+        id: genID(),
         backgroundColor: "orange",
     },
     {
@@ -282,7 +282,7 @@ const data = [
         start: "2023-05-01T13:30:00",
         end: "2023-05-01T17:00:00",
         title: "CSS in React",
-        id: genID(id),
+        id: genID(),
     },
     {
         topics: "Performance Optimiation in React: Memo, useMemo, and useCallback",
@@ -292,7 +292,7 @@ const data = [
         start: "2023-05-02T09:00:00",
         end: "2023-05-02T12:30:00",
         title: "React Performance",
-        id: genID(id),
+        id: genID(),
     },
 
     { topics: null,
@@ -302,7 +302,7 @@ const data = [
         start: "2023-05-02T10:30:00",
         end: "2023-05-02T10:50:00",
         title: "☕ Break Time ☕",
-        id: genID(id),
+        id: genID(),
         backgroundColor: "orange",
     },
     {
@@ -313,7 +313,7 @@ const data = [
         start: "2023-05-02T12:30:00",
         end: "2023-05-02T13:30:00",
         title: "🥗 Lunch Break 🥗",
-        id: genID(id),
+        id: genID(),
         backgroundColor: "orange",
     },
 
@@ -325,7 +325,7 @@ const data = [
         start: "2023-05-02T13:30:00",
         end: "2023-05-02T17:00:00",
         title: "React Redux",
-        id: genID(id),
+        id: genID(),
     },
     {
         topics: "Asynchronous Data Fetching in React: Fetch, Axios, and GraphQL",
@@ -335,7 +335,7 @@ const data = [
         start: "2023-05-03T09:00:00",
         end: "2023-05-03T12:30:00",
         title: "Async Data Fetching",
-        id: genID(id),
+        id: genID(),
     },
   
     { topics: null,
@@ -345,7 +345,7 @@ const data = [
         start: "2023-05-03T10:30:00",
         end: "2023-05-03T10:50:00",
         title: "☕ Break Time ☕",
-        id: genID(id),
+        id: genID(),
         backgroundColor: "orange",
     },
     {
@@ -356,7 +356,7 @@ const data = [
         start: "2023-05-03T13:30:00",
         end: "2023-05-03T17:00:00",
         title: "Next.js SSR",
-        id: genID(id),
+        id: genID(),
     },
     {
         topics: "Building Real-time Applications with Firebase and React",
@@ -366,7 +366,7 @@ const data = [
         start: "2023-05-04T09:00:00",
         end: "2023-05-04T12:30:00",
         title: "Firebase and React",
-        id: genID(id),
+        id: genID(),
     },
     {
         topics: "Advanced React Patterns and Techniques",
@@ -376,7 +376,7 @@ const data = [
         start: "2023-05-04T13:30:00",
         end: "2023-05-04T17:00:00",
         title: "React Advanced",
-        id: genID(id),
+        id: genID(),
         },
 
         { topics: null,
@@ -386,7 +386,7 @@ const data = [
             start: "2023-05-04T10:30:00",
             end: "2023-05-04T10:50:00",
             title: "☕ Break Time ☕",
-            id: genID(id),
+            id: genID(),
             backgroundColor: "orange",
         },
         
@@ -398,7 +398,7 @@ const data = [
             start: "2023-05-04T12:30:00",
             end: "2023-05-04T13:30:00",
             title: "🥗 Lunch Break 🥗",
-            id: genID(id),
+            id: genID(),
             backgroundColor: "orange",
         },
         {
@@ -409,7 +409,7 @@ const data = [
             start: "2023-05-05T09:00:00",
             end: "2023-05-05T12:30:00",
             title: "Hack-A-Thon: D3.js and React",
-            id: genID(id),
+            id: genID(),
             backgroundColor: "green",
         },
         
@@ -420,7 +420,7 @@ const data = [
             start: "2023-05-05T10:30:00",
             end: "2023-05-05T10:50:00",
             title: "☕ Break Time ☕",
-            id: genID(id),
+            id: genID(),
             backgroundColor: "orange",
         },
 
@@ -432,7 +432,7 @@ const data = [
             start: "2023-05-03T12:30:00",
             end: "2023-05-03T13:30:00",
             title: "🥗 Lunch Break 🥗",
-            id: genID(id),
+            id: genID(),
             backgroundColor: "orange",
         },
         {   
@@ -443,7 +443,7 @@ const data = [
             start: "2023-05-05T13:30:00",
             end: "2023-05-05T16:00:00",
             title: "Hack-A-Thon: D3.js and React continued",
-            id: genID(id),
+            id: genID(),
             backgroundColor: "green",
         },
         {
@@ -454,7 +454,7 @@ const data = [
             start: "2023-05-05T16:00:00",
             end: "2023-05-05T17:00:00",
             title: "Presentations",
-            id: genID(id),
+            id: genID(),
         },
         {
             topics: null,
@@ -464,7 +464,7 @@ const data = [
             start: "2023-05-05T12:30:00",
             end: "2023-05-05T13:30:00",
             title: "🥗 Lunch Break 🥗",
-            id: genID(id),
+            id: genID(),
             backgroundColor: "orange",
         },
         
@@ -473,5 +473,6 @@ const data = [
         
         
 ]
+console.log(data);
 
 export default data;
