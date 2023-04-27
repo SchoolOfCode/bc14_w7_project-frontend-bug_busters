@@ -26,3 +26,7 @@
     font-size: 0.5em;
     cursor: pointer;
 }
+
+.day-header-button:hover {
+transform: scale(1.1);
+}
