@@ -2,6 +2,13 @@ import React from "react";
 import "./modal.css";
 
 function Modal({ filteredData, setModalToggle }) {
+
+    // If filtered data array is blank do not render the modal
+    if(filteredData.length === 0)
+    {
+        return;
+    }
+
     return (
         <div data-testid="modalBackground" className="modalBackground" >
             <div className="modalContent">
