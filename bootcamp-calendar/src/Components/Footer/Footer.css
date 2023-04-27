@@ -1,7 +1,12 @@
 .footer-container {
+    margin-top: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-image: url("../../Assets/footerbackground.jpg");
+    height: 50px;
+    padding: 0 20px 0 20px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   }
   
   .socials {
@@ -14,9 +19,9 @@
     justify-content: flex-end;
   }
   
-  
-
-  a {
+  a 
+  {
     padding: 0 5px 0 5px;
+    color: white;
+    font-size: 1.5em;
   }
-

@@ -1,26 +1,18 @@
 import React, { useState } from 'react';
 import FullCalendar from '@fullcalendar/react'; // must go before plugins
 import timeGridPlugin from '@fullcalendar/timegrid'; // a plugin!
+
 import './calendar.css'
 import Modal from "../Modal/Modal"
 
 
-function Calendar({data}) {
+function Calendar({ data, setDateStart }) {
     const [modalToggle, setModalToggle] = useState(false);
 
     const [filteredData, setFilteredData] = useState({});
 
-    // uncomment this to allow formatting of calendar data
-    // function to render jsx into the calendar fields
-    // function renderEventContent(eventInfo) {
-    //     return (
-    //     <>
-    //         <b>{eventInfo.timeText}</b>
-    //         <div><i>{eventInfo.event.title}</i></div>
-    //     </>
-    //     )
-    // }
-  
+    
+
     return (
     <>
         <FullCalendar
@@ -30,9 +22,12 @@ function Calendar({data}) {
         slotMinTime={"07:00:00"}
         slotMaxTime={"18:00:00"}
         initialEvents={data} // inserts pre-made events from the data.js file
+        contentHeight={"auto"} // remove scroll bar - display as is on screen
 
-        // uncomment this to allow formatting of calendar data
-        // eventContent={renderEventContent}
+        datesSet={function(dateInfo) {
+            setDateStart(dateInfo.start);
+            console.log(dateInfo);
+        }}
 
         // remove default content from day header (American formatted date) + hide parent container in css file with class .fc-scrollgrid-sync-inner
         dayHeaderContent={function(arg) {
@@ -43,17 +38,23 @@ function Calendar({data}) {
         dayHeaderDidMount={function(arg) {
             const dateString = arg.date; // Get the date string from the argument
             const dateObj = new Date(dateString); // Create a new Date object from the date string
+
             const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']; // Create an array of days of the week
             const dayOfWeek = daysOfWeek[dateObj.getDay()]; // Get the day of the week from the Date object and use it to look up the corresponding day name in the array
+
             const date = dateObj.getDate(); // Get the day of the month from the Date object
-            const month = dateObj.getMonth() + 1; // Get the month from the Date object and add 1, since getMonth() returns a zero-based index (javascript... 🙄)
+            // Create an array of month names
+            const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']; 
+            const month = monthNames[dateObj.getMonth()]; // Get the month name from the Date object using the month number to look it up in the array
+
             const year = dateObj.getFullYear(); // Get the year from the Date object
 
-            // Create a formatted date string using the day of the week, day of the month, and month
-            const formattedDate = `${dayOfWeek} ${date.toString()} / ${month.toString()}`;
+            // Create a formatted date string using the day of the week, day of the month, and month name
+            const formattedDate = `${dayOfWeek} ${date.toString()} ${month}`;
             // create date format for attaching to button
-            const dataDate = `${year}-${month.toString().padStart(2, '0')}-${date.toString().padStart(2, ' ')}`;
+            const dataDate = `${year}-${(dateObj.getMonth() + 1).toString().padStart(2, '0')}-${date.toString().padStart(2, ' ')}`;
 
+            // INSERT BUTTON INTO DAY HEADER - ⚠ unfortunately the API provided props will not allow rendering a module here so had to mutate DOM directly ⚠
             // create button element
             let button = document.createElement("button");
             // add a class to the button
@@ -80,6 +81,6 @@ function Calendar({data}) {
         {modalToggle && <Modal filteredData={filteredData} setModalToggle={setModalToggle}/>}
     </>
     );
-}
+};
 
 export default Calendar;
