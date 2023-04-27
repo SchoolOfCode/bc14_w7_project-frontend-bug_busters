@@ -21,6 +21,7 @@ function Calendar({ data, setDateStart }) {
         slotMaxTime={"18:00:00"}
         initialEvents={data} // inserts pre-made events from the data.js file
         contentHeight={"auto"} // remove scroll bar - display as is on screen
+        allDaySlot={false} // hide the all day slot cell
 
         datesSet={function(dateInfo) {
             setDateStart(dateInfo.start);
