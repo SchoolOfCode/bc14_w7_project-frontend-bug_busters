@@ -27,7 +27,7 @@ function Calendar({ data, setDateStart }) {
             setDateStart(dateInfo.start);
         }}
 
-        // remove default content from day header (American formatted date) + hide parent container in css file with class .fc-scrollgrid-sync-inner
+        // Insert button into Day Header cell with JSX and output British formatted date as button text
         dayHeaderContent={function(arg) {
           const dateObj = arg.date;
           const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]; // Create an array of days of the week
@@ -38,11 +38,10 @@ function Calendar({ data, setDateStart }) {
           const formattedDate = `${dayOfWeek} ${date.toString()} / ${month.toString()}`;
           const dataDate = `${year}-${month.toString().padStart(2, "0")}-${date
             .toString()
-            .padStart(2, " ")}`;
+            .padStart(2, "0")}`;
 
           function handleClick() {
             setModalToggle(true);
-
             const filterData = data.filter((item) => item.start.startsWith(dataDate));
             setFilteredData(filterData);
           }
