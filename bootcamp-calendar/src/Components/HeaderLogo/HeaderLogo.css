@@ -1,0 +1,27 @@
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+   
+  }
+  
+  .logo-container img {
+    width: 120px;
+    height: 120px;
+    margin-right: 10px;
+    padding-bottom: 20px
+  }
+  
+  .logo-container h1 {
+    margin: 0;
+    text-align: center;
+    flex: 1;
+    border-radius: 10px;
+    height: 125px;
+    font-size: 2.5em;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: white;
+  }
+  
